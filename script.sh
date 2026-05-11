@@ -14,12 +14,6 @@ ENCODED_FILE="subscription.txt"
 mkdir -p "$WORKDIR"
 cd "$WORKDIR"
 
-# Если git repo еще не клонирован
-if [ ! -d ".git" ]; then
-    echo "ERROR: тут должен быть git repo"
-    exit 1
-fi
-
 echo "[1] Download source..."
 curl -fsSL "$SOURCE_URL" -o "$RAW_FILE"
 
